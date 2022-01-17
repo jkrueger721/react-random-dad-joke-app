@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+
 
 function Joke() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<any>([]);
   const fetchPost = async () => {
     try{
       const response = await axios("https://icanhazdadjoke.com/",{
